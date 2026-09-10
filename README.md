@@ -5,7 +5,7 @@
 ### Stand: August 2026
 
 # Datenbankmodell
-![Zahnarztpraxis Datenbankmodell](images/Diagram.png)
+![Zahnarztpraxis Datenbankmodell](images/Diagramm.png)
 
 # Businesslogik:
 - Die Datenbank bildet die grundlegenden Geschäftsprozesse einer Zahnarztpraxis ab. Personen werden zentral in der Tabelle Person gespeichert und können anschließend als Patient und/oder Mitarbeiter geführt werden. Dadurch kann beispielsweise eine Person gleichzeitig langjährige Patientin und Mitarbeiterin der Praxis sein.
