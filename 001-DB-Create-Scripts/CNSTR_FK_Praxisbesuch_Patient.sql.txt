@@ -1,0 +1,8 @@
+USE Zahnarztpraxis;
+GO
+
+ALTER TABLE dbo.Praxisbesuch
+ADD CONSTRAINT FK_Praxisbesuch_Patient
+FOREIGN KEY (PatientID)
+REFERENCES dbo.Patient(PatientID);
+GO

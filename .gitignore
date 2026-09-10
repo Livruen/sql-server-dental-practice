@@ -1,0 +1,17 @@
+# SQL Server database and backup files
+*.bak
+*.mdf
+*.ldf
+*.ndf
+
+# Backup folder
+006-BackUp/
+
+# Temporary files
+*.tmp
+*.log
+
+# Visual Studio / SSMS temporary files
+.vs/
+*.user
+*.suo

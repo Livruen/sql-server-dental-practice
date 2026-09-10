@@ -1,0 +1,17 @@
+USE Zahnarztpraxis
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE OR ALTER FUNCTION dbo.existPatient(@PatientID int) RETURNS BIT
+
+AS
+BEGIN
+  IF EXISTS(
+    SELECT PatientID
+	FROM dbo.Patient
+	WHERE PatientID = @PatientID
+	) RETURN 1
+RETURN 0
+END

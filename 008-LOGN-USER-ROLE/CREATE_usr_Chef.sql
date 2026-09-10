@@ -1,0 +1,6 @@
+CREATE USER Chef WITHOUT LOGIN;
+GO
+
+ALTER ROLE Praxisleitung
+ADD MEMBER Chef;
+GO

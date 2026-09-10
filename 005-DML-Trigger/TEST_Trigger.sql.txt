@@ -1,0 +1,24 @@
+USE Zahnarztpraxis;
+GO
+
+/* ==========================================================
+   TEST: Zahnstammdaten dürfen nicht verändert werden
+   Erwartung: Trigger verhindert UPDATE
+   ========================================================== */
+
+BEGIN TRY
+
+    UPDATE dbo.Zahn
+    SET Zahn_name = N'Test'
+    WHERE ZahnID = 1;
+
+END TRY
+
+BEGIN CATCH
+
+    SELECT
+        ERROR_NUMBER() AS Fehlernummer,
+        ERROR_MESSAGE() AS ErwarteteFehlermeldung;
+
+END CATCH;
+GO
